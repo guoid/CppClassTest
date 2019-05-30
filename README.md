@@ -1,4 +1,4 @@
 # CppClassTest
 Experiment done during class
 
-ฟฮฬรสตั้ะกณฬะ๒ 
+่ฏพๅ ๅฐ็จๅบ
