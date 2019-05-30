@@ -1,7 +1,0 @@
-﻿  test.cpp
-e:\test\test\test.cpp(42): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
-e:\test\test\test.cpp(46): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
-e:\test\test\test.cpp(66): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-e:\test\test\test.cpp(67): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-  test.vcxproj -> E:\test\Debug\test.exe
-  test.vcxproj -> E:\test\Debug\test.pdb (Full PDB)
