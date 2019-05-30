@@ -15,6 +15,7 @@ public:
 
 	void setInch(int i);
 	void setFoot(int f);
+	void set(int i, int f);
 	int getInch();
 	int getFoot();
 
@@ -52,6 +53,12 @@ void CFeet::setInch(int i) {
 
 void CFeet::setFoot(int f) {
 	foot = f;
+}
+
+void CFeet::set(int i, int f) {
+	inch = i;
+	foot = f;
+	check();
 }
 
 int CFeet::getInch() {
@@ -99,11 +106,8 @@ void CFeet::display() {
 int main()
 {
 	CFeet a, b, c, d;
-	a.setFoot(1);
-	a.setInch(2);
-
-	b.setFoot(0);
-	b.setInch(1);
+	a.set(2, 1);
+	b.set(1, 0);
 
 	cout << "[C] A:" << endl;
 	a.display();
@@ -116,8 +120,7 @@ int main()
 	c = a + b;
 	c.display();
 	cout << "[!] Plus   : A + 14" << endl;
-	c.setFoot(0);
-	c.setInch(0);
+	c.set(0, 0);
 	c = a + 14;
 	c.display();
 
@@ -126,9 +129,12 @@ int main()
 	d = a - b;
 	d.display();
 	cout << "[!] Reduce : A - 7" << endl;
-	d.setFoot(0);
-	d.setInch(0);
+	d.set(0, 0);
 	d = a - 7;
+	d.display();
+	cout << "[!] Can`t reduce : A - 222" << endl;
+	d.set(0, 0);
+	d = a - 222;
 	d.display();
 
     return 0;
