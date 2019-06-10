@@ -22,6 +22,7 @@ public:
 		this->id = id;
 		this->grade = grade;
 		this->sex = sex;
+		cout << "This is Student class" << endl;
 	}
 
 	void display() {
@@ -38,12 +39,13 @@ public:
 		nation = "Mongol";
 	}
 
-	MongolStu(string name, int id, int grade, char sex) {
+	MongolStu(string name, int id, int grade, char sex):Student(name,id,grade,sex) {
 		this->name = name;
 		this->id = id;
 		this->grade = grade;
 		this->sex = sex;
 		this->nation = "Mongol";
+		cout << "This is MongolStu class" << endl;
 	}
 };
 
@@ -55,6 +57,5 @@ int main() {
 
 	MongolStu mstu("Gerel",2018,1,'w');
 	mstu.display();
-
 	return 0;
 }
