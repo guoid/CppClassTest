@@ -277,17 +277,18 @@ IDC::IDC(int y, int m, int d, int H, int M, int S, int MS) {
 void IDC::CountLivedDays() {
 	int D[] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
 	int nYear, nMonth, nDay;
-	LivedDays = 0;
+	LivedDays = 1;
 	nYear = 2019;
 	nMonth = 6;
 	nDay = 13;
+
 	for (int i = this->getYear(); i < nYear; i++) {
 		if (i % 400 == 0 || (i % 4 == 0 && i % 100 != 0))
 			LivedDays += 366;
 		else LivedDays += 365;
 	}
 
-	if (this->getYear() % 400 || (this->getYear() % 4 == 0 && this->getYear() % 100 != 0))
+	if (this->getYear() % 400 == 0 || (this->getYear() % 4 == 0 && this->getYear() % 100 != 0))
 		D[1]=29;
 	for (int i = 0; i < this->month; i++)
 		LivedDays -= D[i];
@@ -340,7 +341,7 @@ int main()
 	IDC t5;
 	t5.setYear(2019);
 	t5.setMonth(6);
-	t5.setDay(11);
+	t5.setDay(12);
 	cout << "[^]Birthday is :";
 	t5.printDate();
 	t5.CountLivedDays();
