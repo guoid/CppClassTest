@@ -339,9 +339,9 @@ int main()
 	// test 5
 	cout << "[!!]Test 5" << endl;
 	IDC t5;
-	t5.setYear(2019);
-	t5.setMonth(6);
-	t5.setDay(12);
+	t5.setYear(1999);
+	t5.setMonth(7);
+	t5.setDay(1);
 	cout << "[^]Birthday is :";
 	t5.printDate();
 	t5.CountLivedDays();
